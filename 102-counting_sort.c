@@ -12,7 +12,7 @@ void counting_sort(int *array, size_t size)
 	int *freq, *output, curr;
 	size_t i, max;
 
-	if (array == NULL)
+	if (array == NULL || size < 2)
 		return;
 
 	max = 0;
@@ -42,7 +42,7 @@ void counting_sort(int *array, size_t size)
 		return;
 	}
 
-	for (curr = size - 1; curr >= 0; curr--)
+	for (curr = 0; curr < (int)size; curr++)
 	{
 		output[freq[array[curr] - 1]] = array[curr];
 		output[array[curr]]--;
