@@ -8,10 +8,12 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *current_node = *list, *tmp, *next_node;
+	listint_t *current_node, *tmp, *next_node;
 
 	if (list == NULL || *list == NULL)
 		return;
+
+	current_node = *list;
 
 	while (current_node != NULL)
 	{
