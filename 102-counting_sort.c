@@ -36,6 +36,12 @@ void counting_sort(int *array, size_t size)
 	print_array(freq, array[max] + 1);
 
 	output = malloc(sizeof(int) * size);
+	if (output == NULL)
+	{
+		free(freq);
+		return;
+	}
+
 	for (curr = size - 1; curr >= 0; curr--)
 	{
 		output[freq[array[curr] - 1]] = array[curr];
