@@ -60,7 +60,7 @@ void counting_sort(int *array, size_t size)
 
 	for (i = 0; i < size; i++)
 	{
-		output[freq[array[i] - 1]] = array[i];
+		output[freq[array[i]] - 1] = array[i];
 		freq[array[i]]--;
 	}
 
