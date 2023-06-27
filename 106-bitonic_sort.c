@@ -29,6 +29,7 @@ void bitonic_sort(int *array, size_t size)
  * @array: array of integers to be sorted
  * @low: low index
  * @size: size of the array
+ * @size2: size of the array
  * @dir: direction
  */
 void bitonic_sort_recursive(int *array, size_t low,
@@ -58,6 +59,7 @@ void bitonic_sort_recursive(int *array, size_t low,
  * @array: array of integers to be sorted
  * @low: low index
  * @size: size of the array
+ * @size2: size of the array
  * @dir: direction
  */
 void bitonic_merge(int *array, size_t low, size_t size, size_t size2, int dir)
